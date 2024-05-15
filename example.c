@@ -1,8 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#define ENABLE_VISUAL_STYLES
 #define SLIDER_IMPLEMENTATION
 #include "slider.h"
-#include <math.h>
 
 int main(void) {
     Slider slider = slider_new(u8"amount", /*min*/ 1, /*max*/ 400);

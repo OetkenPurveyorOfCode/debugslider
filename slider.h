@@ -55,14 +55,14 @@ int slider_val(Slider* slider);
 
 //////////////////////////////////////////////////////////
 #ifdef SLIDER_IMPLEMENTATION
-#ifdef ENABLE_VISUAL_STYLES
-#pragma comment(linker,"\"/manifestdependency:type='win32' \
-name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \
-processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
-#endif
 #if defined(_MSC_VER) || defined(__clang__)
-#pragma comment(lib, "comctl32.lib")
-#pragma comment(lib, "user32.lib")
+        #ifdef ENABLE_VISUAL_STYLES
+            #pragma comment(linker,"\"/manifestdependency:type='win32' \
+            name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \
+            processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
+        #endif
+    #pragma comment(lib, "comctl32.lib")
+    #pragma comment(lib, "user32.lib")
 #endif
 
 void update_label(Slider* slider);
